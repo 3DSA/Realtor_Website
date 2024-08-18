@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -33,6 +34,7 @@ nav .nav-links a {
     text-decoration: none;
 }
 
+/* Hero Section */
 .hero {
     background: url('bay-area.jpg') no-repeat center center/cover;
     height: 80vh;
@@ -41,13 +43,12 @@ nav .nav-links a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #FFD700; /* Gold color for visibility */
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #FFD700; /* Changed color to gold for better visibility */
 }
 
 .hero p {
@@ -65,6 +66,7 @@ nav .nav-links a {
     border-radius: 5px;
 }
 
+/* Listings Section */
 .listings {
     padding: 4rem 2rem;
     background-color: #f4f4f4;
@@ -111,6 +113,7 @@ nav .nav-links a {
     transform: translateY(-5px);
 }
 
+/* About and Contact Sections */
 .about, .contact {
     padding: 4rem 2rem;
     text-align: center;
@@ -143,9 +146,61 @@ nav .nav-links a {
     border-radius: 5px;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        height: 60vh;
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .property-card {
+        width: 80%;
+    }
+
+    .about, .contact {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .property-card {
+        width: 100%;
+    }
 }
